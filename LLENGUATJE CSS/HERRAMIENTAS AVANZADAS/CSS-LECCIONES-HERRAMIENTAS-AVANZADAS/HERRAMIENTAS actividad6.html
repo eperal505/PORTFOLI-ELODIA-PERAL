@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Péndulo Animado</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffe6f0;
+        }
+
+        .pendulo {
+            width: 8px;
+            height: 150px;
+            background: pink;
+            position: relative;
+            transform-origin: top center;
+            animation: oscilar 2s ease-in-out infinite alternate;
+        }
+
+        .bola {
+            width: 30px;
+            height: 30px;
+            background: hotpink;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes oscilar {
+            0% { transform: rotate(-30deg); }
+            50% { transform: rotate(0deg); }
+            100% { transform: rotate(30deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="pendulo">
+    <div class="bola"></div>
+</div>
+
+</body>
+</html>

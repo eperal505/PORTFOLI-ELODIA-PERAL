@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eclipse Animado</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #001d3d;
+            overflow: hidden;
+        }
+
+        .sol {
+            width: 150px;
+            height: 150px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .luna {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+            animation: eclipse 4s infinite alternate;
+        }
+
+        @keyframes eclipse {
+            0% {
+                transform: translateX(-300px);
+            }
+            50% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(300px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sol"></div>
+<div class="luna"></div>
+
+</body>
+</html>

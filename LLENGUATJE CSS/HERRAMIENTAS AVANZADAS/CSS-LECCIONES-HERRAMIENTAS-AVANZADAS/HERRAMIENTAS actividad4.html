@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Animado</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffe6f0;
+        }
+        .reloj {
+            width: 200px;
+            height: 200px;
+            border: 8px solid pink;
+            border-radius: 50%;
+            position: relative;
+            background: #fff0f5;
+        }
+        .centro {
+            width: 12px;
+            height: 12px;
+            background: pink;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        .agujas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+        }
+        .aguja-horas {
+            width: 6px;
+            height: 50px;
+            background: pink;
+            border-radius: 3px;
+            transform: translate(-50%, -100%);
+        }
+        .aguja-minutos {
+            width: 4px;
+            height: 70px;
+            background: hotpink;
+            border-radius: 2px;
+            transform: translate(-50%, -100%);
+        }
+        .aguja-segundos {
+            width: 2px;
+            height: 90px;
+            background: deeppink;
+            border-radius: 1px;
+            transform: translate(-50%, -100%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="reloj">
+    <div class="agujas aguja-horas" id="horas"></div>
+    <div class="agujas aguja-minutos" id="minutos"></div>
+    <div class="agujas aguja-segundos" id="segundos"></div>
+    <div class="centro"></div>
+</div>
+
+<script>
+    function actualizarReloj() {
+        const now = new Date();
+        const h = now.getHours() % 12;
+        const m = now.getMinutes();
+        const s = now.getSeconds();
+
+        const gradosHoras = (h + m/60) * 30;
+        const gradosMinutos = (m + s/60) * 6;
+        const gradosSegundos = s * 6;
+
+        document.getElementById('horas').style.transform = `translate(-50%, -100%) rotate(${gradosHoras}deg)`;
+        document.getElementById('minutos').style.transform = `translate(-50%, -100%) rotate(${gradosMinutos}deg)`;
+        document.getElementById('segundos').style.transform = `translate(-50%, -100%) rotate(${gradosSegundos}deg)`;
+    }
+    setInterval(actualizarReloj, 1000);
+    actualizarReloj();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueleto con Filtro</title>
+    <style>
+        .imagen {
+            display: block;
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            transition: filter 0.5s;
+            border-radius: 10px;
+        }
+
+        .imagen:hover {
+            filter: invert(100%);
+        }
+    </style>
+</head>
+<body>
+
+<img src="esqueleto.png" alt="Imagen de esqueleto" class="imagen">
+
+</body>
+</html>

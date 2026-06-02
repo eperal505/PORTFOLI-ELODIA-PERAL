@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstruo Atrapado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .monster-frame {
+            display: inline-block;
+            padding: 15px;
+            background-color: #ff9500;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 5px dashed #000;
+        }
+
+        .monster-inner {
+            background-color: white;
+            padding: 20px;
+            border-radius: 35px;
+            overflow: hidden;
+            border: 3px dashed #ff9500;
+        }
+
+        .monster-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 2px dashed #333;
+        }
+
+        .instruction {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Monstruo Atrapado con Borders Redondeados</h1>
+
+    <div class="monster-frame">
+        <div class="monster-inner">
+            <img src="MONSTRUO.PNG" alt="Monstruo" class="monster-image">
+        </div>
+    </div>
+
+    <p class="instruction">* El monstruo está atrapado dentro de borders redondeados discontinuos</p>
+</div>
+</body>
+</html>

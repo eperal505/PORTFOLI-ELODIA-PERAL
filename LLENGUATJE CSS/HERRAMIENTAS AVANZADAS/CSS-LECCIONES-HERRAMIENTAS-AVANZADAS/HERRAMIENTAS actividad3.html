@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartel de Cookies</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffe6f0;
+            font-family: Arial, sans-serif;
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: pink;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 1rem;
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        .cookie-banner.show {
+            bottom: 30px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cookie-banner" id="banner">
+    Esta web utiliza cookies. Al continuar navegando aceptas su uso.
+</div>
+
+<script>
+    setTimeout(() => {
+        document.getElementById('banner').classList.add('show');
+    }, 2000);
+</script>
+
+</body>
+</html>

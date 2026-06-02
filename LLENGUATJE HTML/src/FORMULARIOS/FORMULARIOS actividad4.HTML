@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="">
+    <h1>Camaras de fotos</h1>
+    <fieldset>
+        <legend>Selecciona los parametros</legend>
+        <select name="Modelo">
+            <option value="" aria-label="Modelo" disabled selected>Marca</option>
+            <option value="1">Canon</option>
+            <option value="2">Casio</option>
+            <option value="3">Fuijifilm</option>
+            <option value="4">GoPro</option>
+            <option value="5">Leica</option>
+            <option value="6">Nikon</option>
+            <option value="7">Pentax</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <select name="Formato">
+            <option value="" aria-label="Formato" disabled selected>Objetivo integrado</option>
+            <option value="0">Compacta</option>
+            <option value="1">Avanzada</option>
+            <option value="2">Bridge</option>
+            <option value="3">Objetivo intercambio</option>
+            <option value="4">Sin espejo</option>
+            <option value="5">Telemetrica</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <select name="Sensor">
+            <option value="" aria-label="Sensor" disabled selected>Tamaño sensor</option>
+            <option value="1">Hasta 1/2 3"</option>
+            <option value="2">De 1 a 1/2</option>
+            <option value="3">De 4/3 a APS-C</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <select name="Resolucion">
+            <option value="" aria-label="Resolucion" disabled selected>Resolucion</option>
+            <option value="0">Hasta 11 MP</option>
+            <option value="1">De 12 a 15 MP</option>
+            <option value="2">De 16 a 20 MP</option>
+            <option value="3">De 21 a 28 MP</option>
+            <option value="4">Mas de 28 MP</option>
+        </select><br><br>
+
+        <label>
+            Precio
+            <input type="number" name="Precio">
+        </label>&nbsp;&nbsp;&nbsp;
+
+        <label>
+            Cantidad
+            <input type="number">
+        </label><br><br>
+
+        <label>
+            Incluir Descatalogadas
+            <input type="checkbox">
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label>
+            Color
+        <input type="color">
+        </label>
+
+    </fieldset>  
+    </form>
+
+</body>
+</html>

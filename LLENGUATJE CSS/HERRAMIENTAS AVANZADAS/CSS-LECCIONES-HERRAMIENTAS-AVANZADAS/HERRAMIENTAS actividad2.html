@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Noria Animada</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffe6f0;
+        }
+        .noria {
+            width: 200px;
+            height: 200px;
+            border: 8px solid pink;
+            border-radius: 50%;
+            position: relative;
+            animation: girar 10s linear infinite;
+        }
+        .noria::before, .noria::after, .noria div {
+            content: "";
+            position: absolute;
+            background: pink;
+        }
+        .noria::before {
+            width: 2px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .noria::after {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .cabina {
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+        }
+        .cabina:nth-child(1) { transform: translateX(-50%) translateY(-100px) rotate(0deg) translateY(100px); }
+        .cabina:nth-child(2) { transform: translateX(-50%) translateY(-100px) rotate(90deg) translateY(100px); }
+        .cabina:nth-child(3) { transform: translateX(-50%) translateY(-100px) rotate(180deg) translateY(100px); }
+        .cabina:nth-child(4) { transform: translateX(-50%) translateY(-100px) rotate(270deg) translateY(100px); }
+        @keyframes girar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="noria">
+    <div class="cabina"></div>
+    <div class="cabina"></div>
+    <div class="cabina"></div>
+    <div class="cabina"></div>
+</div>
+</body>
+</html>
