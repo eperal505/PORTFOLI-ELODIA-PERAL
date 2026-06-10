@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oveja con Sombra</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: url('wall.jpg') no-repeat center top;
+            background-size: cover;
+            position: relative;
+        }
+
+        .suelo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 200px;
+            background: url('floor.jpg') repeat-x;
+            background-size: cover;
+        }
+
+        .oveja {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            z-index: 2;
+        }
+
+        .sombra {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 40px;
+            background: rgba(0,0,0,0.8);
+            border-radius: 50%;
+            filter: blur(5px);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="suelo"></div>
+<div class="sombra"></div>
+<img src="oveja.png" alt="Oveja" class="oveja">
+
+</body>
+</html>
